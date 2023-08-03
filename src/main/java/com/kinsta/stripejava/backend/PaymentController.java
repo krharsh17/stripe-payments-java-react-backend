@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @RestController
-@CrossOrigin()
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PaymentController {
 
     String STRIPE_API_KEY = System.getenv().get("STRIPE_API_KEY");
