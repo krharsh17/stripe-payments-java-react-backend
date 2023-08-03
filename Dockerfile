@@ -4,14 +4,11 @@ LABEL maintainer="krharsh17"
 
 WORKDIR app
 
-COPY src ./src
-COPY pom.xml .
-COPY .mvn ./.mvn
-COPY mvnw .
+COPY . /app
 
 RUN ./mvnw clean package
 
-COPY target/backend.jar backend.jar
+COPY ./target/backend.jar backend.jar
 EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "backend.jar"]
