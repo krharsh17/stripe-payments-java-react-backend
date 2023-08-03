@@ -11,7 +11,7 @@ COPY mvnw .
 
 RUN ./mvnw clean package
 
-ADD target/backend.jar backend.jar
+COPY target/backend.jar backend.jar
 EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "backend.jar"]
