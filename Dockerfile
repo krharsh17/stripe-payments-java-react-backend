@@ -8,7 +8,6 @@ COPY . /app
 
 RUN ./mvnw clean package
 
-COPY ./target/backend.jar /app
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "backend.jar"]
+ENTRYPOINT ["java", "-jar", "/app/target/backend.jar"]
