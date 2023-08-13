@@ -1,6 +1,5 @@
 package com.kinsta.stripejava.backend;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.stripe.model.Product;
 
 public class RequestDTO {
@@ -8,8 +7,6 @@ public class RequestDTO {
     String customerName;
     String customerEmail;
     String subscriptionId;
-
-    @JsonProperty
     boolean invoiceNeeded;
 
     public Product[] getItems() {
